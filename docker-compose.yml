@@ -4,7 +4,24 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.oliviermaghe.rule=Host(`oliviermaghe.com`) || Host(`www.oliviermaghe.com`) || Host(`oliviermaghe.be`) || Host(`www.oliviermaghe.be`) || Host(`maghe.es`) || Host(`www.maghe.es`) || Host(`maghe.be`) || Host(`www.maghe.be`) || Host(`olivier.maghe.es`) || Host(`olivier.maghe.be`)"
-      - "traefik.http.routers.oliviermaghe.entrypoints=websecure"
-      - "traefik.http.routers.oliviermaghe.tls.certresolver=letsencrypt"
       - "traefik.http.services.oliviermaghe.loadbalancer.server.port=80"
+
+      - "traefik.http.routers.oliviermaghe-com.rule=Host(`oliviermaghe.com`) || Host(`www.oliviermaghe.com`)"
+      - "traefik.http.routers.oliviermaghe-com.entrypoints=websecure"
+      - "traefik.http.routers.oliviermaghe-com.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.oliviermaghe-com.service=oliviermaghe"
+
+      - "traefik.http.routers.oliviermaghe-be.rule=Host(`oliviermaghe.be`) || Host(`www.oliviermaghe.be`)"
+      - "traefik.http.routers.oliviermaghe-be.entrypoints=websecure"
+      - "traefik.http.routers.oliviermaghe-be.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.oliviermaghe-be.service=oliviermaghe"
+
+      - "traefik.http.routers.maghe-be.rule=Host(`maghe.be`) || Host(`www.maghe.be`) || Host(`olivier.maghe.be`)"
+      - "traefik.http.routers.maghe-be.entrypoints=websecure"
+      - "traefik.http.routers.maghe-be.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.maghe-be.service=oliviermaghe"
+
+      - "traefik.http.routers.maghe-es.rule=Host(`maghe.es`) || Host(`www.maghe.es`) || Host(`olivier.maghe.es`)"
+      - "traefik.http.routers.maghe-es.entrypoints=websecure"
+      - "traefik.http.routers.maghe-es.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.maghe-es.service=oliviermaghe"
