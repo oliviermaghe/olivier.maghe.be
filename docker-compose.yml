@@ -1,6 +1,10 @@
 services:
   web:
     build: .
-    ports:
-      - "8080:80"
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.oliviermaghe.rule=Host(`oliviermaghe.com`) || Host(`www.oliviermaghe.com`)"
+      - "traefik.http.routers.oliviermaghe.entrypoints=websecure"
+      - "traefik.http.routers.oliviermaghe.tls.certresolver=letsencrypt"
+      - "traefik.http.services.oliviermaghe.loadbalancer.server.port=80"
