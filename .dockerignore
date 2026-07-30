@@ -1,0 +1,9 @@
+.git
+.DS_Store
+.vscode
+.venv
+agents.md
+**/node_modules
+**/*.md
+docker-compose.yml
+.dockerignore

@@ -1,0 +1,421 @@
+/* Radio & DJ — ambiance fun / studio */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #071018;
+  --panel: #0d1a28;
+  --ink: #f2f6fa;
+  --muted: #9db0c3;
+  --neon: #ff6a2b;
+  --neon-2: #39d0ff;
+  --line: rgba(255, 255, 255, 0.1);
+  --nav-bg: #071018;
+  --font-display: "Bebas Neue", Impact, sans-serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+}
+
+body.page-radio {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.page-radio .site-header {
+  color: var(--ink);
+}
+
+.page-radio .brand {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  letter-spacing: 0.04em;
+}
+
+.radio-hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+}
+
+.radio-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.radio-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(0.55) saturate(1.15) contrast(1.05);
+  transform: scale(1.02);
+}
+
+.radio-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(7, 16, 24, 0.88) 18%, rgba(7, 16, 24, 0.35) 58%, rgba(7, 16, 24, 0.75) 100%),
+    radial-gradient(circle at 70% 30%, rgba(255, 106, 43, 0.28), transparent 42%);
+}
+
+.radio-hero-content {
+  position: relative;
+  z-index: 1;
+  padding:
+    clamp(5.5rem, 12vh, 7rem)
+    var(--page-inline)
+    clamp(2.5rem, 6vh, 4rem);
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.on-air {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.1rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 106, 43, 0.55);
+  background: rgba(255, 106, 43, 0.12);
+  color: var(--neon);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.on-air::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--neon);
+  box-shadow: 0 0 12px var(--neon);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.radio-hero h1 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 10vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.radio-hero .lead {
+  margin: 0;
+  max-width: 34rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.stations {
+  padding: clamp(3rem, 8vh, 5rem) var(--page-inline);
+}
+
+.stations h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  letter-spacing: 0.04em;
+}
+
+.section-intro {
+  margin: 0 0 1.75rem;
+  max-width: 38rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.station-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.station {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.15rem 1.25rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--line);
+  min-height: 7.5rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.station:hover {
+  border-color: rgba(255, 106, 43, 0.45);
+  transform: translateY(-2px);
+}
+
+.station-logo {
+  display: grid;
+  place-items: center;
+  width: 10rem;
+  height: 6.15rem; /* 625×385 */
+  background: #fff;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.station-logo img {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.station-logo.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.station-logo.belrtl {
+  color: #e30613;
+}
+
+.station-logo.must {
+  color: #f5c518;
+}
+
+.station h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.station p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* —— DJ —— */
+.dj-hero {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+}
+
+.dj-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.dj-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  filter: brightness(0.48) saturate(1.2) contrast(1.08);
+}
+
+.dj-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg, rgba(7, 16, 24, 0.92) 12%, rgba(7, 16, 24, 0.4) 55%, rgba(7, 16, 24, 0.7) 100%),
+    radial-gradient(circle at 80% 70%, rgba(57, 208, 255, 0.22), transparent 40%);
+}
+
+.dj-hero-content {
+  position: relative;
+  z-index: 1;
+  padding:
+    clamp(4rem, 10vh, 6rem)
+    var(--page-inline)
+    clamp(2.5rem, 6vh, 4rem);
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dj-hero-content .lead {
+  max-width: 40rem;
+}
+
+.dj-badge {
+  border-color: rgba(57, 208, 255, 0.5);
+  background: rgba(57, 208, 255, 0.12);
+  color: var(--neon-2);
+}
+
+.dj-badge::before {
+  background: var(--neon-2);
+  box-shadow: 0 0 12px var(--neon-2);
+}
+
+.dj-hero h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 10vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.dj-hero .lead {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.venues {
+  padding: clamp(2.5rem, 6vh, 4rem) var(--page-inline);
+  display: grid;
+  gap: clamp(2rem, 5vh, 3.5rem);
+}
+
+.venue {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+.venue-alt {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.venue-alt .venue-media {
+  order: 2;
+}
+
+.venue-media {
+  position: relative;
+  overflow: hidden;
+  min-height: min(52vw, 420px);
+  border: 1px solid var(--line);
+}
+
+.venue-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  filter: saturate(1.05) contrast(1.04);
+}
+
+.venue-copy {
+  max-width: 28rem;
+}
+
+.venue-logo {
+  display: block;
+  max-height: 4.5rem;
+  width: auto;
+  margin-bottom: 1rem;
+  background: #fff;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.venue-logo-wide {
+  max-height: 3.4rem;
+  max-width: min(100%, 16rem);
+  object-fit: contain;
+}
+
+.venue h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: 0.03em;
+}
+
+.venue-place {
+  margin: 0 0 0.85rem;
+  color: var(--neon);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.venue-copy > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.dj-more {
+  padding: 0 var(--page-inline) clamp(3rem, 8vh, 5rem);
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dj-more p {
+  margin: 0 0 1rem;
+  max-width: 46rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.dj-more h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: 0.04em;
+}
+
+.dj-more p:last-child {
+  margin-bottom: 0;
+}
+
+.page-radio .site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+@media (max-width: 860px) {
+  .venue,
+  .venue-alt {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-alt .venue-media {
+    order: 0;
+  }
+
+  .venue-media {
+    min-height: 52vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .station-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .station {
+    grid-template-columns: 10rem 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .on-air::before {
+    animation: none;
+  }
+}
