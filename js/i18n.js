@@ -12,8 +12,7 @@
 
       "home.metaTitle": "Olivier Maghe — Présentation",
       "home.metaDesc": "Olivier Maghe, belge francophone installé sur la Costa Blanca. Musique, code et voyages.",
-      "home.headline": "Olivier Maghe",
-      "home.tagline": "Plusieurs vies, une même passion.",
+      "home.headline": "Plusieurs Vies, Une même passion.",
       "home.lead": "Belge francophone, je vis en Espagne sur la Costa Blanca",
       "home.langs": "Français · Anglais · Espagnol · un peu de néerlandais et d’italien",
       "home.ctaRadio": "Radio & DJ",
@@ -140,8 +139,7 @@
 
       "home.metaTitle": "Olivier Maghe — About",
       "home.metaDesc": "Olivier Maghe, French-speaking Belgian based on the Costa Blanca. Music, code and travel.",
-      "home.headline": "Olivier Maghe",
-      "home.tagline": "Several lives, one lasting passion.",
+      "home.headline": "Several Lives, One Lasting Passion.",
       "home.lead": "French-speaking Belgian, I live in Spain on the Costa Blanca",
       "home.langs": "French · English · Spanish · a little Dutch and Italian",
       "home.ctaRadio": "Radio & DJ",
