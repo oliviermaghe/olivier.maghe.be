@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olivier Maghe — CSS Battle</title>
+  <meta name="description" content="Un défi CSS par jour : mes soumissions CSSBattle, générées en direct depuis GitHub.">
+  <link rel="icon" href="images/oliviermaghe-avatar.png" type="image/png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/battle.css">
+</head>
+<body class="page-battle" data-title-key="cssbattle.metaTitle" data-desc-key="cssbattle.metaDesc">
+  <header class="site-header">
+    <a class="brand" href="index.html">Olivier Maghe</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" data-nav-panel>
+      <a href="index.html" data-i18n="nav.home">Présentation</a>
+      <a href="radio.html" data-i18n="nav.radio">Radio & DJ</a>
+      <a href="web.html" data-i18n="nav.web">Développement</a>
+      <a href="projets.html" data-i18n="nav.projects">Projets</a>
+      <a href="css-battle.html" aria-current="page" data-i18n="nav.cssbattle">CSS Battle</a>
+      <button type="button" class="lang-toggle" data-lang-toggle>EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="battle-hero">
+      <div class="battle-hero-content">
+        <div class="battle-badge" data-i18n="cssbattle.badge">DÉFI DU JOUR</div>
+        <h1 class="headline" data-i18n="cssbattle.headline">Un défi CSS,
+chaque jour.</h1>
+        <p class="lead" data-i18n="cssbattle.lead">Je poste presque quotidiennement mes soumissions CSSBattle sur YouTube et TikTok — une sorte de sudoku pour geeks développeurs. Voici la galerie complète, générée en direct depuis GitHub.</p>
+        <div class="battle-cta-row">
+          <a class="battle-cta" href="https://cssbattle.dev" target="_blank" rel="noopener" data-i18n="cssbattle.cta">Jouer sur CSSBattle.dev</a>
+          <a class="battle-cta battle-cta-ghost" href="https://github.com/oliviermaghe/Olivier-cssbattles" target="_blank" rel="noopener" data-i18n="cssbattle.repoCta">Code source sur GitHub</a>
+        </div>
+      </div>
+      <div class="battle-hero-logo" aria-hidden="true">
+        <img src="images/logo-cssbattle.svg" alt="" width="500" height="348">
+      </div>
+    </section>
+
+    <section class="battle-board" id="battle">
+      <h2 data-i18n="cssbattle.currentTitle" data-reveal>Ce mois-ci</h2>
+
+      <div class="battle-status" id="battleStatus">
+        <p data-i18n="cssbattle.loading">Chargement des défis…</p>
+      </div>
+
+      <div class="battle-grid" id="battleGallery"></div>
+
+      <section class="battle-archive" id="battleArchive" hidden>
+        <h2 data-i18n="cssbattle.archiveTitle">Archives</h2>
+        <div class="battle-archive-months" id="battleArchiveMonths"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="socials" aria-label="Réseaux sociaux">
+      <a href="mailto:olivier@maghe.be">olivier@maghe.be</a>
+      <a href="tel:+32475772266">+32 475 77 22 66</a>
+      <a href="tel:+34604418383">+34 604 41 83 83</a>
+      <a href="https://www.youtube.com/@oliviermaghe" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.tiktok.com/@cssavecoli" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.linkedin.com/in/oliviermaghe/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/oliviermaghe" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://bsky.app/profile/oliviermaghe.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cssbattle.js"></script>
+</body>
+</html>

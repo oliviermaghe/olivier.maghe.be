@@ -5,7 +5,7 @@ FROM nginx:1.27-alpine
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Contenu du site
-COPY index.html radio.html web.html projets.html /usr/share/nginx/html/
+COPY index.html radio.html web.html projets.html css-battle.html /usr/share/nginx/html/
 COPY css /usr/share/nginx/html/css
 COPY js /usr/share/nginx/html/js
 COPY images /usr/share/nginx/html/images
