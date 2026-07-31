@@ -55,8 +55,6 @@ Le site est découpé en 5 pages, chacune avec sa propre ambiance visuelle (coul
 - Les mois précédents sont regroupés dans une section **Archives**, chargés à la demande (au clic) pour ne pas tout télécharger d'un coup.
 - Aucune base de données ni backend : tout se fait côté client, au chargement de la page.
 
-Les anciens sous-domaines `cssbattle.*` (déployés séparément sur Hostinger, dépôt `cssbattle-gallery`) redirigent désormais en 301 vers `https://olivier.maghe.be/css-battle.html` — ce n'est plus un site distinct.
-
 ## Développement local
 
 Le site est 100 % statique, donc n'importe quel serveur de fichiers fonctionne :
