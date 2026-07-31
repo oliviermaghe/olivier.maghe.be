@@ -60,6 +60,8 @@
       "radio.doudingueBody": "Là où j’ai commencé à mixer pour des soirées à thèmes musicaux précis : 80s, 100 % FR, et bien d’autres.",
       "radio.moreTitle": "Et encore…",
       "radio.moreBody1": "Mais aussi quantité d’autres clubs, plus ou moins gros, et tellement de soirées privées.",
+      "radio.moreClubsList": "Le Nautilus, Manoir Club, Le Mex, Le Butterfly, Le Bunker, Le Palace, Le Manhattan (France), L’Alhambra, Le Boccacio Beach — où j’ai eu des résidences.",
+      "radio.moreGuest": "Je ne peux pas faire la liste des clubs où j’ai joué comme guest DJ ou host DJ pour une soirée… Mais il y en a beaucoup :-)",
       "radio.moreBody2": "J’ai fait partie d’IDC (International DJ Connection), créée par le célèbre DJ Dick Van Gelder. Cela m’a permis de jouer dans d’autres pays que ma Belgique natale.",
       "radio.moreBody3": "J’ai été DJ pour des sociétés d’événements comme Studio54 à Braine-l’Alleud, ou Arto qui sonorise les Francofolies.",
 
@@ -186,6 +188,8 @@
       "radio.doudingueBody": "Where I started mixing themed nights: 80s, 100% French, and many more.",
       "radio.moreTitle": "And more…",
       "radio.moreBody1": "Plus plenty of other clubs, big and small, and countless private parties.",
+      "radio.moreClubsList": "Le Nautilus, Manoir Club, Le Mex, Le Butterfly, Le Bunker, Le Palace, Le Manhattan (France), L'Alhambra, Le Boccacio Beach — where I held residencies.",
+      "radio.moreGuest": "I can't list every club where I played as a guest DJ or host DJ for a single night… but there were plenty :-)",
       "radio.moreBody2": "I was part of IDC (International DJ Connection), founded by the legendary DJ Dick Van Gelder. That took me beyond my native Belgium.",
       "radio.moreBody3": "I’ve also been a DJ for event companies like Studio54 in Braine-l’Alleud, and Arto, who soundtracks the Francofolies.",
 
