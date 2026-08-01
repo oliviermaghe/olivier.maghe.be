@@ -25,3 +25,12 @@ services:
       - "traefik.http.routers.maghe-es.entrypoints=websecure"
       - "traefik.http.routers.maghe-es.tls.certresolver=letsencrypt"
       - "traefik.http.routers.maghe-es.service=oliviermaghe"
+
+      - "traefik.http.routers.cssbattle.rule=Host(`cssbattle.oliviermaghe.com`) || Host(`cssbattle.oliviermaghe.be`) || Host(`cssbattle.maghe.be`) || Host(`cssbattle.maghe.es`)"
+      - "traefik.http.routers.cssbattle.entrypoints=websecure"
+      - "traefik.http.routers.cssbattle.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.cssbattle.service=oliviermaghe"
+      - "traefik.http.routers.cssbattle.middlewares=cssbattle-redirect"
+      - "traefik.http.middlewares.cssbattle-redirect.redirectregex.regex=^https://cssbattle\\..*"
+      - "traefik.http.middlewares.cssbattle-redirect.redirectregex.replacement=https://oliviermaghe.com/css-battle.html"
+      - "traefik.http.middlewares.cssbattle-redirect.redirectregex.permanent=true"
