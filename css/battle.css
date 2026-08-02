@@ -91,6 +91,41 @@ body.page-battle {
   font-size: 1rem;
 }
 
+.battle-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.battle-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.battle-cta-btn:hover {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: 0 0 18px rgba(253, 222, 1, 0.35);
+  transform: translateY(-1px);
+}
+
+.battle-cta-or {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .battle-hero-logo {
   display: grid;
   place-items: center;
