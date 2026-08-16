@@ -43,7 +43,7 @@ services:
       POSTGRES_USER: umami
       POSTGRES_PASSWORD: ${UMAMI_DB_PASSWORD}
     volumes:
-      - umami-db-data:/var/lib/postgresql/data
+      - umami-db-data-v2:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U umami"]
       interval: 5s
@@ -69,4 +69,4 @@ services:
       - "traefik.http.routers.umami.service=umami"
 
 volumes:
-  umami-db-data:
+  umami-db-data-v2:
