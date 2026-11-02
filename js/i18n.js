@@ -118,7 +118,7 @@
       "projects.tiktok": "TikTok",
 
       "cssbattle.metaTitle": "Olivier Maghe — CSS Battle",
-      "cssbattle.metaDesc": "Un défi CSS par jour : mes soumissions CSSBattle, générées en direct depuis GitHub.",
+      "cssbattle.metaDesc": "Un défi CSS par jour : chaque cible CSSBattle reproduite au pixel près avec le moins de caractères possible. Toutes mes soumissions, en direct depuis GitHub.",
       "cssbattle.badge": "Daily target",
       "cssbattle.headline": "Un défi CSS,\nchaque jour.",
       "cssbattle.lead": "Je poste presque quotidiennement mes soumissions CSSBattle sur YouTube et TikTok — une sorte de sudoku pour geeks développeurs.",
@@ -254,7 +254,7 @@
       "projects.tiktok": "TikTok",
 
       "cssbattle.metaTitle": "Olivier Maghe — CSS Battle",
-      "cssbattle.metaDesc": "One CSS challenge a day: my CSSBattle submissions, rendered live from GitHub.",
+      "cssbattle.metaDesc": "One CSS challenge a day: every CSSBattle target recreated pixel-perfect with as few characters as possible. All my submissions, live from GitHub.",
       "cssbattle.badge": "Daily target",
       "cssbattle.headline": "One CSS challenge,\nevery day.",
       "cssbattle.lead": "I post my CSSBattle submissions almost daily on YouTube and TikTok — a kind of sudoku for geek developers.",
